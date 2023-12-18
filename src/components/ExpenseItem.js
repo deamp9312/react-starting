@@ -11,10 +11,10 @@ function ExpenseItem() {
     const expenseAmout = 294.12;
   return (
     <div className="expense-item">
-      <div>March 28th 2021</div>
+      <div>{expenseDate.toISOString()}</div>
       <div className="expense-item__description">
-        <h2>Car Insurance</h2>
-        <div className="expense-item__price">$294.12</div>
+        <h2>{expenseTitle}</h2>
+        <div className="expense-item__price">${expenseAmout}</div>
       </div>
     </div>
   );
