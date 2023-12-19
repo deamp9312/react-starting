@@ -10,12 +10,15 @@ function ExpenseItem(props) {
     // const expenseTitle = "Car Insurance";
     // const expenseAmout = 294.12;
     
+    // const formattedDate = props.expenses && props.expenses.date ? props.expenses.date.toISOString() : "Invalid Date";
+
   return (
     <div className="expense-item">
-      <div>{props.date.toISOString()}</div>
+      <div>{props.expenses.date.toISOString()}</div> 
+      {/* <div>{formattedDate}</div> */}
       <div className="expense-item__description">
-        <h2>{props.title}</h2>
-        <div className="expense-item__price">${props.amount}</div>
+        <h2>{props.expenses.title}</h2>
+        <div className="expense-item__price">${props.expenses.amount}</div>
       </div>
     </div>
   );
