@@ -6,19 +6,26 @@
 import './ExpenseItem.css';
 
 function ExpenseItem(props) {
+// function ExpenseItem({date,title,amount}) { //객체로 하나씩 끌어다가 사용도 가능
     // const expenseDate = new Date(2023,11,18);
     // const expenseTitle = "Car Insurance";
     // const expenseAmout = 294.12;
     
     // const formattedDate = props.expenses && props.expenses.date ? props.expenses.date.toISOString() : "Invalid Date";
 
+    const month = props.date.toLocaleString("ko-kr",{month:'long'});
+    const year = props.date.getFullYear();
+    const day = props.date.toLocaleString("ko-kr",{day:'2-digit'});
+
   return (
     <div className="expense-item">
-      <div>{props.expenses.date.toISOString()}</div> 
+      <div>{year}년</div>
+      <div>{month}</div>
+      <div>{day}</div>
       {/* <div>{formattedDate}</div> */}
       <div className="expense-item__description">
-        <h2>{props.expenses.title}</h2>
-        <div className="expense-item__price">${props.expenses.amount}</div>
+        <h2>{props.title}</h2>
+        <div className="expense-item__price">${props.amount}</div>
       </div>
     </div>
   );

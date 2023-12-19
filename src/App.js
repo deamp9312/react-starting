@@ -22,7 +22,7 @@ function App() {
   return (
     <div>
       <h2>Let's get started!</h2>
-      {/* <ExpenseItem
+      <ExpenseItem
         title={expenses[0].title}
         amount={expenses[0].amount}
         date={expenses[0].date}
@@ -31,11 +31,8 @@ function App() {
         title={expenses[1].title}
         amount={expenses[1].amount}
         date={expenses[1].date}
-      ></ExpenseItem> */}
-      <ExpenseItem
-        expenses={expenses[0]}
-      >
-      </ExpenseItem>
+      ></ExpenseItem>
+      
     </div>
   );
 }
