@@ -1,3 +1,4 @@
+import React from 'react';
 import Expense from "./components/Expense"
 //사용자 지정 컴포넌트는 대문자로 시작되는것을 규칙으로 함.
 function App() {
@@ -15,13 +16,20 @@ function App() {
       date: new Date(2023, 11, 12),
     },
   ];
-  //명령적 접근법
-  const para = document.createElement("p");
-  para.textContent = "This is also visible";
-  document.getElementById("root").append(para);
-  return (
-    <Expense expenses={expenses}/>
-  );
+// 반환하는 밑에랑 같은구조라고 생각하면됨 과거의 JSX 의 소스가 이런식이였음
+  return React.createElement(
+    'div',
+    {},
+    React.createElement('h2',{},'hi'),
+    React.createElement(Expense,{expenses: expenses})
+    );
+
+  // return (
+  //   <div>
+  //       <h2>hi</h2>
+  //   <Expense expenses={expenses}/>
+  //   </div>
+  // );
 }
 
 //JSX란
