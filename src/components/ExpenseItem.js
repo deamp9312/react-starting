@@ -5,6 +5,8 @@
 //반환되어야 됨(아래 외부의 div 테그가 없으면 문제발생함)
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
+import Card from './Card';
+
 function ExpenseItem(props) {
 // function ExpenseItem({date,title,amount}) { //객체로 하나씩 끌어다가 사용도 가능
     // const expenseDate = new Date(2023,11,18);
@@ -18,14 +20,14 @@ function ExpenseItem(props) {
     // const day = props.date.toLocaleString("ko-kr",{day:'2-digit'});
 
   return (
-    <div className="expense-item">
+    <Card className="expense-item">
         <ExpenseDate date={props.date}/>
       {/* <div>{formattedDate}</div> */}
       <div className="expense-item__description">
         <h2>{props.title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 
