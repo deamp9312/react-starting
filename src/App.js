@@ -16,7 +16,7 @@ function App() {
       date: new Date(2023, 11, 12),
     },
   ];
-// 반환하는 밑에랑 같은구조라고 생각하면됨 과거의 JSX 의 소스가 이런식이였음
+// 반환하는 밑에랑 같은구조라고 생각하면됨 과거의 JSX 의 소스가 이런식이였음 test
   return React.createElement(
     'div',
     {},
